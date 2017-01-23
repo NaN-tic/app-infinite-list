@@ -1,0 +1,21 @@
+{
+  "name": "tryton-infinite-list",
+  "description": "Infinite list handler",
+  "main": "index.js",
+  "authors": [
+    "nan-tic"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "infinite-list",
+    "tryton"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

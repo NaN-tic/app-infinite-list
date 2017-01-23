@@ -1,0 +1,15 @@
+{
+  "name": "tryton-infinite-list",
+  "version": "1.0.0",
+  "description": "Infinite list handler",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "infinite-list",
+    "tryton"
+  ],
+  "author": "nan-tic",
+  "license": "ISC"
+}

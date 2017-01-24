@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { Locker } from 'angular2-locker';
 
 import { TrytonProvider } from '../../providers/tryton-provider'
 
@@ -53,15 +52,17 @@ export class InfiniteList {
      */
     limit: number = 10;
 
+    /**
+     * Items to display
+     * @type {Array<any>}
+     */
     list_items: Array<any> = [];
 
 
 
     constructor(public navCtrl: NavController, 
-        private trytond_provider: TrytonProvider) { 
+        public trytond_provider: TrytonProvider) { 
     }
-
-    
 
     /**
      * Allows a view to have infinite scrolling, meaning that it will not

@@ -6,7 +6,7 @@ import { TrytonProvider } from '../../providers/tryton-provider'
 import { EncodeJSONRead } from '../json/encode-json-read'
 
 @Component({
-    selector: 'infenite-list',
+    selector: 'infnite-list',
     templateUrl: 'infinite-list.html',
 
 })

@@ -7,7 +7,7 @@ import { EncodeJSONRead } from '../json/encode-json-read'
 
 @Component({
     selector: 'infnite-list',
-    templateUrl: 'infinite-list.html',
+    templateUrl: 'infinite-list-example.html',
 
 })
 /**
@@ -30,7 +30,7 @@ export class InfiniteList {
      * Domain of the method
      * @type {string}
      */
-    domain: string; 
+    domain: string;
     /**
      * Fields to search
      * @type {Array<string>}
@@ -60,8 +60,8 @@ export class InfiniteList {
 
 
 
-    constructor(public navCtrl: NavController, 
-        public trytond_provider: TrytonProvider) { 
+    constructor(public navCtrl: NavController,
+        public trytond_provider: TrytonProvider) {
     }
 
     /**
@@ -71,7 +71,7 @@ export class InfiniteList {
      * @param {any} infiniteScroll Infinite scroll event
      */
     doInfinite(infiniteScroll: any) {
-      
+
         console.log("Begin async op");
         this.loadData().then(() => {
             infiniteScroll.complete()
@@ -83,7 +83,7 @@ export class InfiniteList {
      */
     loadData() {
         let json_constructor = new EncodeJSONRead;
-        json_constructor.addNode(this.method, this.domain, 
+        json_constructor.addNode(this.method, this.domain,
             this.fields, this.offset, this.limit);
 
         let json = json_constructor.createJson()

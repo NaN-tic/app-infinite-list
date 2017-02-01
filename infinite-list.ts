@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import { TrytonProvider } from '../../providers/tryton-provider'
+import { TrytonProvider } from '../providers/tryton-provider'
 
 import { EncodeJSONRead } from '../json/encode-json-read'
 

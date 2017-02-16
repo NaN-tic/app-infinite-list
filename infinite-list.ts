@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, Events } from 'ionic-angular';
 
 import { TrytonProvider } from '../providers/tryton-provider'
 
@@ -61,7 +61,8 @@ export class InfiniteList {
 
 
     constructor(public navCtrl: NavController,
-        public trytond_provider: TrytonProvider) {
+        public trytond_provider: TrytonProvider,
+        public events: Events) {
     }
 
     /**
@@ -97,6 +98,7 @@ export class InfiniteList {
                 this.offset+=this.limit;
 
                 console.log("Done");
+                this.events.publish("Data loading finished")
                 resolve(true)
             },
             error => {

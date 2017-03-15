@@ -28,9 +28,9 @@ export class InfiniteList {
     method: string;
     /**
      * Domain of the method
-     * @type {string}
+     * @type {array}
      */
-    domain: string;
+    domain: any[];
     /**
      * Fields to search
      * @type {Array<string>}
@@ -72,10 +72,16 @@ export class InfiniteList {
      * @param {any} infiniteScroll Infinite scroll event
      */
     doInfinite(infiniteScroll: any) {
-
+      if (this.list_items.length == 0)
+        infiniteScroll.enable(false);
         console.log("Begin async op");
         this.loadData().then(() => {
-            infiniteScroll.complete()
+          // Disable scroll if list is empty
+          if (this.list_items.length == 0)
+            //infiniteScroll.enable(false);
+            console.log(this.list_items)
+          infiniteScroll.complete();
+
         })
     }
 
